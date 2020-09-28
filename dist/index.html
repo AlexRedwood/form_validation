@@ -76,12 +76,15 @@
               <label for="usercountry">Country</label>
             </div>
             <div class="input-container">
-              <span class="valid" aria-live="polite">Not required</span>
+              <span class="valid" aria-live="polite" id="usercountry-error"
+                >Not required</span
+              >
               <input
                 type="text"
                 name="country"
                 id="usercountry"
                 placeholder="Your country..."
+                maxlength="150"
               />
             </div>
           </div>
@@ -91,12 +94,16 @@
               <label for="userzipcode">Zip code</label>
             </div>
             <div class="input-container">
-              <span class="valid" aria-live="polite">Not required</span>
+              <span class="valid" aria-live="polite" id="userzipcode-error"
+                >Not required</span
+              >
               <input
                 type="text"
                 name="zipcode"
                 id="userzipcode"
                 placeholder="Your zip code..."
+                maxlength="6"
+                minlength="4"
               />
             </div>
           </div>
@@ -106,13 +113,17 @@
               <label for="userpassword">Password</label>
             </div>
             <div class="input-container">
-              <span class="error" aria-live="polite">Required</span>
+              <span class="error" aria-live="polite" id="userpassword-error"
+                >Required</span
+              >
               <input
                 type="password"
                 name="password"
                 id="userpassword"
                 placeholder="Your password..."
                 required
+                minlength="10"
+                maxlength="40"
               />
             </div>
           </div>
@@ -124,7 +135,12 @@
               >
             </div>
             <div class="input-container">
-              <span class="error" aria-live="polite">Required</span>
+              <span
+                class="error"
+                aria-live="polite"
+                id="userpassword-confirmation-error"
+                >Required</span
+              >
               <input
                 type="password"
                 name="password-confirmation"

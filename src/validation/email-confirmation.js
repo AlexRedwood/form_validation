@@ -6,6 +6,20 @@ function applyEmailConfirmationValidation(inputId, errorId, submitId, emailId) {
 
   const submit = document.getElementById(submitId);
 
+  email.addEventListener("input", function(event) {
+    // Each time the user types something, we check if the
+    // form fields are valid.
+    if (inputIsValid()) {
+      // In case there is an error message visible, if the field
+      // is valid, we remove the error message.
+      emailConfirmationError.innerHTML = "Good"; // Reset the content of the message
+      emailConfirmationError.className = "valid"; // Reset the visual state of the message
+    } else {
+      // If there is still an error, show the correct error
+      showError();
+    }
+  });
+
   emailConfirmation.addEventListener("input", function(event) {
     // Each time the user types something, we check if the
     // form fields are valid.
