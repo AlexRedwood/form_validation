@@ -192,15 +192,13 @@ form {
 }
 
 .input-container {
-  width: 65%;
+  width: 450px;
   margin-top: 6px;
   font-size: 1em;
 }
 
 .input-container > input {
-  width: 100%;
-  min-width: 450px;
-  max-width: 700px;
+  width: 400px;
   padding: 12px 18px;
   background-color: #f5f6fa;
   color: #470d4d;
